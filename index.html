@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface FIO</title>
+</head>
+<body>
+    <input type="text" id="firstfio" placeholder="Введите ФИО">
+    <button type="submit" id="replacefio" >Replace</button>
+    <div>
+        <p><label for="newname">Ваше имя:</label>
+    <input type="text" id="newname">
+</p>
+    <p><label for="newfamily">Фамилия :</label>
+    <input type="text" id="newfamily"></p>
+    <label for="newotchestvo">Отчество:</label>
+    <input type="text" id="newotchestvo" >
+</div>
+
+<script>
+replacefio.addEventListener('click',() =>{
+        let firstfio = document.querySelector('#firstfio').value;
+        console.log(firstfio);
+
+        let fioarr = firstfio.split(" ");
+        /*fioarr.forEach(element => {
+            let www = fioarr[0];
+            www = www.replace(www[0],www[0].toUpperCase());
+            console.log(www);
+        });*/
+         document.querySelector('#newname').value = fioarr[0];
+         document.querySelector('#newfamily').value = fioarr[1];
+         document.querySelector('#newotchestvo').value = fioarr[2];
+        });
+
+</script>    
+</body>
+</html>
