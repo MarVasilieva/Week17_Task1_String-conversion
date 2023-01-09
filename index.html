@@ -23,13 +23,13 @@
 replacefio.addEventListener('click',() =>{
         let firstfio = document.querySelector('#firstfio').value;
         console.log(firstfio);
-
+        //firstfio = firstfio.trim();
         let fioarr = firstfio.split(" ");
-        /*fioarr.forEach(element => {
-            let www = fioarr[0];
-            www = www.replace(www[0],www[0].toUpperCase());
-            console.log(www);
-        });*/
+        for (let i = 0; i < fioarr.length ; i++) {
+            fioarr[i]=fioarr[i].toLowerCase();
+            fioarr[i]=fioarr[i][0].toUpperCase() + fioarr[i].substr(1);
+            console.log(fioarr);
+        }
          document.querySelector('#newname').value = fioarr[0];
          document.querySelector('#newfamily').value = fioarr[1];
          document.querySelector('#newotchestvo').value = fioarr[2];
